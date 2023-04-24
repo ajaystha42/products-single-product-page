@@ -14,7 +14,7 @@ export default defineConfig(() => {
         shared: ["react", "react-dom", "react-router-dom"],
 
         exposes: {
-          "./PDPContent": "./src/PDPContent.tsx",
+          "./PDPContent": "./src/components/PDPContent/PDPContent.tsx",
         },
       }),
     ],

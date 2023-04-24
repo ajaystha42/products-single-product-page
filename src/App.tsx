@@ -1,15 +1,18 @@
-import Header from "home/Header";
 import Footer from "home/Footer";
-import PDPContent from "./PDPContent";
-import { Route, Routes } from "react-router-dom";
+import Header from "home/Header";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
+  {
+    /* No need to setup routes here to make work on home page */
+  }
   return (
     <>
       <Header />
-      <Routes>
+      <Dashboard />
+      {/* <Routes>
         <Route path="/product/:id" element={<PDPContent />} />
-      </Routes>
+      </Routes> */}
       <Footer />
     </>
   );

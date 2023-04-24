@@ -14,10 +14,8 @@ interface ProductInfo {
 
 export default function PDPContent() {
   const params = useParams();
-  console.log({ params });
   const { id } = params;
   const [product, setProduct] = useState<ProductInfo | null>(null);
-  console.log({ id });
   useEffect(() => {
     if (id) {
       getProductById(id).then(setProduct);
