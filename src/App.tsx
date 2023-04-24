@@ -1,6 +1,8 @@
 import Footer from "home/Footer";
 import Header from "home/Header";
 import Dashboard from "./components/Dashboard/Dashboard";
+import { Route, Routes } from "react-router-dom";
+import PDPContent from "./components/PDPContent/PDPContent";
 
 function App() {
   {
@@ -10,9 +12,9 @@ function App() {
     <>
       <Header />
       <Dashboard />
-      {/* <Routes>
+      <Routes>
         <Route path="/product/:id" element={<PDPContent />} />
-      </Routes> */}
+      </Routes>
       <Footer />
     </>
   );
