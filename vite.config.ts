@@ -1,16 +1,17 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd());
+
   return {
     plugins: [
       react(),
       federation({
         name: "pdp",
         remotes: {
-          home: "http://localhost:3000/assets/remoteEntry.js",
-          cart: "http://localhost:3002/assets/remoteEntry.js",
+          home: env["VITE_HOME_URL"],
         },
         shared: ["react", "react-dom", "react-router-dom"],
 
