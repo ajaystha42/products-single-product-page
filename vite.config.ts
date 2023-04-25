@@ -10,6 +10,7 @@ export default defineConfig(() => {
         name: "pdp",
         remotes: {
           home: "http://localhost:3000/assets/remoteEntry.js",
+          cart: "http://localhost:3002/assets/remoteEntry.js",
         },
         shared: ["react", "react-dom", "react-router-dom"],
 

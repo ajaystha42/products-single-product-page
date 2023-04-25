@@ -1,5 +1,3 @@
-import Footer from "home/Footer";
-import Header from "home/Header";
 import Dashboard from "./components/Dashboard/Dashboard";
 import { Route, Routes } from "react-router-dom";
 import PDPContent from "./components/PDPContent/PDPContent";
@@ -10,12 +8,10 @@ function App() {
   }
   return (
     <>
-      <Header />
-      <Dashboard />
       <Routes>
+        <Route path="/" element={<Dashboard />} />
         <Route path="/product/:id" element={<PDPContent />} />
       </Routes>
-      <Footer />
     </>
   );
 }
