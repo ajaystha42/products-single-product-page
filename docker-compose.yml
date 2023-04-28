@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    build: 
+      context: .
+    volumes:
+      - .:/pdp
+    ports:
+      - 3001:3001
+    image: products_pdp:1.0
+    container_name: products_pdp
+    command: pnpm serve --host 0.0.0.0
+
